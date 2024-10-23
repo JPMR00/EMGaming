@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://yky3gcemufnj"]
+
+[ext_resource type="FontFile" uid="uid://d3gbgoigp587r" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_3nn6h"]
+[ext_resource type="Script" path="res://scripts/coin_counter.gd" id="1_e8sx3"]
+[ext_resource type="Texture2D" uid="uid://rj5o5isrojtl" path="res://assets/sprites/1coin.png" id="2_wwr52"]
+
+[node name="CoinCounter" type="CanvasLayer"]
+follow_viewport_enabled = true
+script = ExtResource("1_e8sx3")
+
+[node name="CoinCount" type="Label" parent="."]
+offset_left = 58.0
+offset_top = 12.0
+offset_right = 73.0
+offset_bottom = 20.0
+scale = Vector2(5, 5)
+theme_override_fonts/font = ExtResource("1_3nn6h")
+theme_override_font_sizes/font_size = 8
+text = "X"
+
+[node name="CoinSprite" type="Sprite2D" parent="."]
+z_as_relative = false
+position = Vector2(30, 30)
+scale = Vector2(5, 5)
+texture = ExtResource("2_wwr52")
